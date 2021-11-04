@@ -1,5 +1,3 @@
-
-
 CREATE TABLE categoria (
   idC int(11) NOT NULL AUTO_INCREMENT,
   nombre varchar(60) NOT NULL,
