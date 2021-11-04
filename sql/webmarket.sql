@@ -1,6 +1,6 @@
 ﻿--DELETE DATABASE webmarket;
 --CREATE DATABASE  webmarket ;
---USE webmarket;
+USE webmarket;
 
 CREATE TABLE categoria (
   idC      int          AUTO_INCREMENT PRIMARY KEY,
@@ -17,17 +17,6 @@ INSERT INTO categoria (idC, nombre) VALUES	(8,'Cinto');
 INSERT INTO categoria (idC, nombre) VALUES	(9,'Bateria');
 INSERT INTO categoria (idC, nombre) VALUES	(10,'Zoom');
 
-/*CREATE TABLE productos (
-  idP         int         AUTO_INCREMENT ,
-  marca       varchar(60) NOT NULL,
-  descripcion varchar(60) NOT NULL,
-  origen      varchar(60) NOT NULL,
-  precio      int         NOT NULL,
-  categoria   int         NOT NULL,
-  PRIMARY KEY (idP,categoria),
-  FOREIGN KEY  (categoria),
-  CONSTRAINT FK_categoria FOREIGN KEY (categoria) REFERENCES categoria (idC)
-);*/
 
 CREATE TABLE productos (
   idP         int         AUTO_INCREMENT ,
@@ -84,35 +73,3 @@ INSERT INTO productos (idP, marca, descripcion, origen, precio, categoria) VALUE
 INSERT INTO productos (idP, marca, descripcion, origen, precio, categoria) VALUES
 	(21,'Xixion','Zoom economico','china',25,10);
 
-
-/*
-CREATE TABLE login(
-	id_login	int				auto_increment PRIMARY KEY,
-    user		varchar(20)		not null,
-    pwd			varchar(20)		not null
-);
-
-INSERT INTO login VALUES(DEFAULT, 'admin', '0000');
-INSERT INTO login VALUES(DEFAULT, 'user','1234');
-
-SELECT id_login FROM login WHERE user = 'admin';
-SELECT pwd FROM login WHERE id_login = '1';
-
-CREATE TABLE pacientes(
-	id_paciente			int			auto_increment PRIMARY KEY,
-    nombre				varchar(50)	NOT NULL,
-    fecha				date		NULL,
-    fecha_nac			date		NULL,
-    edad				int			NULL,
-    genero				char		NOT NULL,
-    ocupacion			varchar(20)	NULL,
-    lateralidad			char		NOT NULL,
-    nacionalidad		varchar(20)	NULL,
-    religion			varchar(20)	NULL,
-    domicilio			varchar(20)	NULL,
-    telefono			varchar(20)	NULL,
-    email				varchar(40)	NULL,
-    tel_emergencia		varchar(20)	NULL,
-    con_emergencia		varchar(50)	NULL
-);
-*/
